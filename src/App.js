@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import "./styles/gens.css";
+import "./styles/comps.css";
+import Home from "./pages/HomePage";
+import HelpPage from "./pages/HelpPage";
+import AppPage from "./pages/AppPage";
+import EditorPage from "./pages/EditorPage";
+import LoginDialog from "./components/loginDialog";
 
-function App() {
+const App = () => {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/login" element={<LoginDialog />} />
+        <Route path="/app" element={user ? <AppPage /> : <Home />}>
+          <Route path=":id" element={<EditorPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

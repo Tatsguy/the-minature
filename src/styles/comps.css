@@ -1,0 +1,494 @@
+.barra {
+  top: 0px;
+  z-index: 1006;
+  transform: translateY(0px);
+  position: fixed;
+  left: 0px;
+  width: calc(100% + 0px);
+}
+
+.barra-content {
+  display: flex;
+  padding: 1em 1.5em;
+  background-color: #b8cdf8;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.listaEle {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.btnNav {
+  height: 100%;
+  align-content: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: black;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btnNav:hover {
+  background-color: #454ade;
+  color: #b8cdf8;
+}
+
+/*Navbar App*/
+.frame-container {
+  background-color: #090a1c;
+  min-height: 100vh;
+}
+
+.toolbar {
+  align-items: flex-start;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  position: relative;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: height, width, transform, max-width, left, right, top,
+    bottom, box-shadow;
+  width: 100%;
+  background-color: #0b0c23;
+}
+
+.toolbar-content {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  transition: inherit;
+  width: 100%;
+  color: #454ade;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.logoApp {
+  vertical-align: middle;
+  width: 32px;
+  object-fit: contain;
+}
+
+.fixed-profile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: #454ade;
+  font-size: 1.5em;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.rounded-profile {
+  border-radius: 100%;
+  width: 35%;
+  object-fit: contain;
+}
+
+.navigation-drawer {
+  top: 0px;
+  bottom: 0px;
+  width: 56px;
+  left: 0px;
+  z-index: 1008;
+  transform: translateX(0px);
+  position: fixed;
+  height: calc(100% + 0px);
+  background-color: #41463d;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.2s;
+  transition-property: box-shadow, transform, visibility, width, height, left,
+    right, top, bottom;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-drawer-content {
+  flex: 0 1 auto;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 64px;
+}
+
+.tool-list {
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+.list-item {
+  margin-bottom: 4px;
+  min-height: 48px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-inline: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  align-items: center;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  display: grid;
+  flex: none;
+  grid-template-areas: "prepend content append";
+  grid-template-columns: max-content 1fr auto;
+  max-width: 100%;
+  outline: none;
+  padding: 4px 16px;
+  position: relative;
+  text-decoration: none;
+}
+
+.main-app {
+  flex: 1 0 auto;
+  max-width: 100%;
+  padding: 0px 0px 64px 56px;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #090a1c;
+  color: white;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+}
+
+.app-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-small {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.d-flex {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.text-end {
+  bottom: 0px;
+  z-index: 1004;
+  transform: translateY(0px);
+  position: fixed;
+  height: 64px;
+  left: 56px;
+  width: calc(100% - 56px);
+  text-align: end;
+  margin-bottom: 16px;
+  vertical-align: middle;
+}
+
+.transBtn {
+  background: none;
+  color: #41463d;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.returnBtn > .transBtn {
+  color: white;
+}
+
+.addBtn {
+  background-color: #39e981;
+  color: white;
+  font-size: 26px;
+  border: none;
+  border-radius: 46px;
+  padding: 12px 22px;
+  margin-right: 10px;
+  font-family: "Montserrat Alternates", sans-serif;
+  cursor: pointer;
+}
+
+.iconoMini {
+  font-size: 20px;
+}
+
+/* Login Dialog*/
+.backLogin {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #090a1c;
+  z-index: 10000;
+  align-items: center;
+  display: flex;
+}
+
+.contentLogin {
+  width: 30%;
+  margin: auto;
+  background-color: #0b0c23;
+  text-align: center;
+  border-radius: 20px;
+  padding: 3em 2em;
+}
+
+label {
+  font-size: 26px;
+  display: block;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: white;
+}
+
+input {
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.login-foto {
+  margin-bottom: 15px;
+}
+
+/*Quill Formatting*/
+.ql-container,
+.ql-editor {
+  min-height: 450px;
+  border-radius: 0 0 30px 30px;
+  max-height: 460px;
+}
+
+.ql-editor {
+  overflow-y: scroll;
+}
+
+.ql-toolbar {
+  border-radius: 30px 30px 0 0;
+}
+
+.ql-formats {
+  background-color: white;
+  border-radius: 5px 0 5px 0;
+  margin-left: 5px;
+}
+
+/*Article Card*/
+
+/* Botones de Filtro */
+.filter-buttons button {
+  margin-right: 8px;
+  padding: 8px 16px;
+  background-color: #454ade;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-buttons button:hover {
+  background-color: #323594;
+}
+
+.text-medium-emphasis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.article-card {
+  flex: 1 1 calc(50% - 16px); /* Dos tarjetas por fila */
+  border: 1px solid #454ade2f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.article-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0 8px 8px 0;
+}
+.article-card-content {
+  padding: 16px;
+}
+.article-card-title {
+  font-size: 1.5em;
+  margin: 0 0 8px;
+}
+.article-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.article-card-date {
+  font-size: 0.9em;
+  color: #888;
+}
+.article-card-categories {
+  display: flex;
+  gap: 8px;
+}
+.article-card-category {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+.article-card-author {
+  font-size: 0.9em;
+  color: #555;
+}
+.article-card-description {
+  font-size: 1em;
+  color: #555;
+  margin: 0 0 16px;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+.linkBtn {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.toggleText,
+.error {
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logoEditor {
+  text-decoration: none;
+  color: currentcolor;
+  display: flex;
+  gap: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .btnNav,
+  .transBtn,
+  .addBtn {
+    font-size: 1.25rem; /* Smaller font size */
+    padding: 0.5rem; /* Smaller padding */
+  }
+
+  .contentLogin {
+    width: 80%; /* Full width on smaller screens */
+  }
+
+  .article-card {
+    flex: 1 1 calc(100% - 1rem); /* Full width cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .btnNav,
+  .transBtn {
+    font-size: 1rem; /* Further reduction for very small screens */
+  }
+
+  .text-end {
+    height: 90px;
+  }
+
+  .iconoMini {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+
+  .textoMovil {
+    display: none;
+  }
+
+  .contentLogin {
+    width: 90%; /* Slightly wider for mobile */
+  }
+
+  .main-app {
+    padding: 0;
+    margin-top: 3.2em;
+  }
+  .toolbar-content {
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0b0c23;
+  }
+  .navigation-drawer {
+    display: none !important;
+  }
+
+  .logoEditor {
+    margin-left: 20px;
+  }
+}

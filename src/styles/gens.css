@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #e3e8f2;
+}
+
+.bgPage {
+  background-color: #e3e8f2;
+}
+
+/* Landing Page */
+.Landing {
+    margin-top: 4em;
+    padding-top: 2em;
+    text-align: center;
+}
+
+/* Typography */
+.headLand {
+    font-size: 3rem; /* Responsive font size */
+    color: #454ade;
+}
+
+.textLand {
+    font-size: 3rem; /* Responsive font size */
+}
+
+.contentLand {
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 1em 5%; /* Use percentage for responsive padding */
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+/* Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.75em; /* Adjusted for padding */
+}
+
+.col {
+    flex: 1 1 45%; /* Responsive columns */
+    max-width: 48%;
+    padding: 0.75em; /* Adjusted for responsiveness */
+}
+
+.card {
+    background-color: rgb(181, 206, 215);
+    color: rgb(0, 0, 0);
+    min-height: 25rem; /* Use rem for better scaling */
+    max-height: 28rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Flexbox for content alignment */
+    overflow: hidden;
+    padding: 2em 1em;
+    transition: box-shadow 0.28s, opacity 0.28s, background 0.28s;
+}
+
+.card > p {
+    font-size: 1.125rem; /* Responsive font size */
+}
+
+.card > h3 {
+    font-size: 1.375rem; /* Responsive font size */
+    font-weight: 600;
+}
+
+/* Responsive Images */
+.responsive-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.img {
+    object-fit: contain;
+    width: 100%; /* Ensure full width */
+}
+
+.logoImg{
+    width: 20%;
+}
+
+/*Editor´s page*/
+.application {
+    background-color: #090a1c;
+    position: fixed;
+    z-index: 1100;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100%;
+  }
+  
+  .reloj {
+    font-weight: 700;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #8e94a1;
+    font-size: 16px;
+    background-color: transparent !important;
+  }
+  
+  .carrousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px 0;
+    align-items: center;
+  }
+  
+  .carrousel-item {
+    flex: 0 0 auto;
+    padding: 20px;
+  }
+  
+  .btn-group {
+    background: transparent;
+    border-color: #454ade;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-right: 22px;
+  }
+  
+  .btn-loot {
+    background-color: #090a1c;
+    padding: 5px 20px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .embed-container {
+    height: 100%;
+    min-width: 95%;
+    position: relative;
+  }
+  
+  #text {
+    width: 100%;
+    overflow: hidden;
+    color: #222;
+    background-color: transparent;
+    font-family: Courier, monospace;
+    font-weight: normal;
+    font-size: 24px;
+    resize: none;
+    line-height: 40px;
+    outline: none;
+    border: none;
+  }
+
+/* Buttons */
+.btnColab {
+    display: block;
+    width: 80%; /* More responsive width */
+    margin: auto; /* Centering */
+    padding: 1.5rem ; /* Use rem for scaling */
+    color: black;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+.btnColab:hover {
+    background-color: #454ade;
+    color: #b8cdf8;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .headLand, .textLand {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .contentLand {
+        font-size: 1.25rem; /* Smaller font size for mobile */
+    }
+
+    .col {
+        flex: 1 1 100%; /* Stack columns on small screens */
+        max-width: 100%; /* Full width */
+    }
+
+    .btnColab {
+        width: 90%; /* Adjust button width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .embed-container{
+        width: 80%;
+        height: 90%;
+        align-content: center;
+        text-align: center;
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+    .headLand, .textLand {
+        font-size: 2rem; /* Further reduction for very small screens */
+    }
+
+    .contentLand {
+        font-size: 1rem; /* Further reduction for very small screens */
+    }
+}
+
+/* Footer and Other Elements */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0b0c23;
+    z-index: 1004;
+}
+
+.round-foot-btn {
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.125rem; /* Responsive */
+    padding: 0.5rem;
+    color: white;
+}
+
+.round-foot-btn:hover {
+    background-color: #454ade;
+    color: #b8cdf8;
+}
